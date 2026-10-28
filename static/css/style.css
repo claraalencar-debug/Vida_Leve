@@ -1,0 +1,329 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #c9def5;
+    color: #173bb0;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* BARRA LATERAL */
+.sidebar {
+    width: 300px;
+    min-width: 300px;
+    background: #528fba;
+    color: white;
+    padding-bottom: 25px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 13px 5px;
+    border-bottom: 1px solid #ffffff80;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 18px 35px;
+}
+
+.sidebar li {
+    margin-bottom: 13px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.sidebar .horario-titulo {
+    margin-top: 5px;
+}
+
+.horario {
+    padding: 15px 20px 0 70px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* ÁREA PRINCIPAL */
+.conteudo {
+    flex: 1;
+    min-width: 0;
+    padding: 15px 30px 25px;
+    background: linear-gradient(135deg, #dcecfb, #b8d0f0);
+}
+
+/* MENU */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 25px;
+    padding: 15px;
+}
+
+.menu a {
+    color: #173bb0;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* LOGO E APRESENTAÇÃO */
+.apresentacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 10px auto 25px;
+}
+
+.logo img {
+    width: 220px;
+    max-width: 100%;
+}
+
+.marca {
+    text-align: left;
+}
+
+.nome-pequeno {
+    font-size: 35px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.marca h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1;
+    letter-spacing: -2px;
+    color: #123bb4;
+}
+
+.slogan {
+    font-size: clamp(14px, 1.5vw, 21px);
+    letter-spacing: 2px;
+    margin: 30px 0 20px;
+}
+
+.botao {
+    display: table;
+    margin: 0 auto;
+    background: #528fba;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 0 #326d9b;
+}
+
+.botao:hover {
+    background: #286fa8;
+}
+
+.contato {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 12px;
+    text-align: left;
+}
+
+.pin {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+.zap {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.contato a {
+    color: #123bb4;
+}
+
+/* CARTÕES DAS MÉDICAS */
+.equipe {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 950px;
+    margin: 25px auto 0;
+    padding: 18px 12px 20px;
+    background: white;
+}
+
+.medica {
+    background: #fff;
+    border: 1px solid #e1e6eb;
+    min-width: 0;
+}
+
+.medica img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    display: block;
+}
+
+.informacoes {
+    padding: 10px;
+    min-height: 75px;
+}
+
+.informacoes h3 {
+    color: #df7770;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.informacoes p {
+    color: #687789;
+    font-size: 11px;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    color: #4f6680;
+    font-size: 12px;
+    padding: 25px 10px 0;
+}
+
+/* CELULARES E TABLETS */
+@media (max-width: 1000px) {
+    .sidebar {
+        width: 240px;
+        min-width: 240px;
+    }
+
+    .sidebar ul {
+        padding-left: 22px;
+        padding-right: 15px;
+    }
+
+    .horario {
+        padding-left: 40px;
+    }
+
+    .apresentacao {
+        gap: 12px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .medica img {
+        height: 140px;
+    }
+}
+
+@media (max-width: 700px) {
+    .layout {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .sidebar ul {
+        columns: 2;
+        padding: 15px 25px;
+    }
+
+    .horario {
+        padding: 15px 25px;
+    }
+
+    .conteudo {
+        padding: 15px;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .apresentacao {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .marca {
+        text-align: center;
+    }
+
+    .nome-pequeno {
+        font-size: 25px;
+    }
+
+    .marca h1 {
+        font-size: 44px;
+    }
+
+    .slogan {
+        margin: 15px 0;
+    }
+
+    .equipe {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .medica img {
+        height: 160px;
+    }
+}
+
+@media (max-width: 380px) {
+    .equipe {
+        grid-template-columns: 1fr;
+    }
+
+    .medica img {
+        height: 220px;
+    }
+
+    .marca h1 {
+        font-size: 38px;
+    }
+}
